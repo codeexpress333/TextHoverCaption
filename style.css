@@ -1,0 +1,168 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+body {
+    background: #212121;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.container {
+    font-family: 'Raleway', Arial, sans-serif;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    margin: 10px 1%;
+    min-width: 220px;
+    max-width: 310px;
+    max-height: 220px;
+    width: 100%;
+    background: #000;
+    text-align: center;
+}
+
+.container * {
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+.container img {
+    opacity: 0.8;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container figcaption {
+    bottom: 0;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.container h2 {
+    font-weight: 400;
+    left: 0;
+    right: 0;
+    letter-spacing: -1px;
+    margin: 0 auto;
+    position: absolute;
+    text-transform: uppercase;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+.container h2 span {
+    font-weight: 800;
+}
+
+.container p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50%;
+    opacity: 0;
+    font-size: 14px;
+    transform: translateY(-20%) scale(0.7);
+}
+
+.container .square {
+    height: 78px;
+    width: 78px;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    content: '';
+    transform: rotate(45deg) translate(-50%, -50%);
+    transform-origin: 0 0;
+}
+
+.container .square::before,
+.container .square::after,
+.container .square div::before,
+.container .square div::after {
+    background: #fff;
+    content: '';
+    display: block;
+    transition: all 0.4s ease-in-out;
+}
+
+.container .square::before,
+.container .square::after {
+    width: 65%;
+    height: 2px;
+}
+
+.container .square div::before,
+.container .square div::after {
+    width: 2px;
+    height: 65%;
+}
+
+.container .square::before,
+.container .square div::before {
+    left: 0;
+    top: 0;
+}
+
+.container .square::after,
+.container .square div::after {
+    bottom: 0;
+    right: 0;
+}
+
+.container a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.container:hover img {
+    opacity: 0.25;
+    transform: scale(1.1);
+}
+
+.container:hover h2 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container:hover p {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.container:hover .square:before {
+    width: 38%;
+}
+
+.container:hover .square div:before {
+    height: 38%;
+}
+
+.container:hover .square:after {
+    width: 55%;
+}
+
+.container:hover .square div:after {
+    height: 55%;
+}
+
+@media (max-width: 991px) {
+    body {
+      overflow-x: hidden;
+      overflow-y: visible;
+    }
+}
+
